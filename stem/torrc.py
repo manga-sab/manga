@@ -44,8 +44,10 @@ def parse_torrc(torrc_path=None):
   
   with open(torrc_path) as torrc_fh:
     for line in torrc_fh.readlines():
-      line = line.strip()
+      line = line.strip()      
       if line.startswith('#'):
+        continue
+      elif line=="":
         continue
       else:
         key, val = line.split(' ')
@@ -79,4 +81,3 @@ class Torrc(dict):
   def __str__(self):
     return '\n'.join(["%s %s" % (key, value) for key, value in self.items()])
   
-
