@@ -68,6 +68,7 @@ import test.integ.util.conf
 import test.integ.util.proc
 import test.integ.util.system
 import test.integ.version
+import test.integ.torrc
 
 OPT = "uist:l:c:h"
 OPT_EXPANDED = ["unit", "integ", "style", "targets=", "test=", "log=", "tor=", "config=", "help"]
@@ -163,6 +164,7 @@ INTEG_TESTS = (
   test.integ.connection.connect.TestConnect,
   test.integ.control.base_controller.TestBaseController,
   test.integ.control.controller.TestController,
+  test.integ.torrc.TestTorrcparser,
 )
 
 
