@@ -31,5 +31,4 @@ class TestTorrcparser(unittest.TestCase):
     """
     test=stem.torrc.Torrc()
     self.assertRaises(stem.torrc.InvalidInput, test._parse, StringIO(INVALID_TORRC))
-    
-    
+       
